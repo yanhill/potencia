@@ -39,7 +39,7 @@ var deslocamento;
 var vols = [];
 
 function preload(){
-    song = loadSound('pg/metamorphosis.mp3');
+    song = loadSound('metamorphosis.mp3');
     //song = loadSound('LINN/bixaTravesty.mp3');
     //song = loadSound('TOE/EyeOfNight.mp3');
     //song = loadSound('TOE/thePassage.mp3');
