@@ -16,5 +16,130 @@ html, body {
       align-items: center;
       justify-content: center;
     background-color: white;
+    font-size: 18px;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   }
+
+    
+  @media (min-width: 200px){
+        
+    .container-mesa{
+      bottom: 0;
+      left: 0;
+      margin-bottom:40px;
+    }
+
+    .espaco{
+      display: flex;
+justify-content: flex-start;
+align-items: flex-end;
+margin-left: 20px;
+    }
+    
+    .container-mesa{
+      width:100vw;
+      color:white;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr; 
+    }
+
+    .titulo{
+      font-size:1.25em;
+      font-family: 'Anton', sans-serif;
+      text-align:center;
+      align-self: end;
+      margin-bottom: -3px;
+      text-align: right;
+    }
+
+    .atualizar{
+      
+      color:white;
+      background:RGBA(0,0,0,0.8);
+      text-align: bottom;
+      align-content: bottom;
+
+      border: 1px solid white;
+      font-family: 'Dosis', sans-serif;
+padding: 5px 8px;
+font-size: 0.8em;
+border-radius: 5px;
+letter-spacing: 2px;
+    }
+  
+  
+    .sobre{
+      font-family: 'Dosis', sans-serif;
+      align-self: end;
+      align-self: end;
+    }
+
+    .instrucao, .versao{
+      display:none;
+    }
+  }
+  
+  @media (min-width: 599px){
+    
+    .container-mesa{
+      bottom: 0;
+      left: 0;
+      margin-bottom:80px;
+    }
+    
+    .container-mesa{
+      width:100vw;
+      color:white;
+      display: grid;
+      grid-template-columns: 1fr  auto 0.5fr 0.5fr; 
+    }
+
+    .espaco{
+      display:none;
+    }
+
+    .instrucao{
+      display:inline;
+      font-family: 'Dosis', sans-serif;
+      margin-left:60px;
+      margin-right:30px;
+      align-self: end;
+    }
+
+    .versao{
+      display:inline;
+      font-family: 'Dosis', sans-serif;
+      text-align: right;
+      margin-right:60px;
+      align-self: end;
+    }
+
+    .titulo{
+      font-size:1.25em;
+      font-family: 'Anton', sans-serif;
+      text-align:center;
+      align-self: end;
+      margin-bottom: -3px;
+    }
+  
+    .sobre{
+      font-family: 'Dosis', sans-serif;
+      align-self: end;
+      align-self: end;
+    }
+  }
+
+
+
+  .box{
+    padding:5px;
+  }
+
+
+  .container-mor{
+    width: 100vw;
+  }
+  .tela, .container-mesa{
+    position:absolute;
+  }
+
