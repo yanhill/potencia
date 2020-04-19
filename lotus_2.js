@@ -31,8 +31,15 @@ function drawParticle(x,y,w,h,hue,sat,bri){
     rect(x,y,w,h);
 }
 
+window.addEventListener("load",function() {
+    setTimeout(function(){
+        // This hides the address bar:
+        window.scrollTo(0, 1);
+    }, 0);
+});
+
 function predefinicoesDoObjeto(){
-    vetores = 100;
+    vetores = 50;
     afastamento = 500;
     deslocamento = 50;
     reparticao = 20;
