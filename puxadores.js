@@ -1,5 +1,7 @@
 var x3;
 var y3;
+var containerInicio;
+
 
 function calculaHandles(){  
     push();
@@ -34,7 +36,17 @@ function mouseReleased(){
         if(!comecou){   
             song.play();
             comecou = true;
+            
+            containerInicio = document.getElementById("containerInicio");
+            containerInicio.style.display ="none";
+
+            var btnRestart = document.getElementById("restart");
+            btnRestart.style.display ="block";
+
+            var btnUpdate = document.getElementById("update");
+            btnUpdate.style.borderBottom ="none";
         }
+
         else if(comecou){
             primeiro = false;
         }
