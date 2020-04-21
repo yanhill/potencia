@@ -6,16 +6,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.dom.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.sound.min.js"></script>
 
-    <script src="comportamento/file-saver/src/fileSaver.js"></script>
+    <script src="fileSaver.js"></script>
     
     <script id="tela" src="lotus_2.js"></script>
     <script id="tela" src="manipulacao.js"></script>
     <script id="tela" src="tratamentosonoro.js"></script>
     <script id="tela" src="puxadores.js"></script>
     <script id="tela" src="export.js"></script>
+    <script id="tela" src="DOM.js"></script>
     
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="estilo/style.css">
 
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Dosis:400,500&display=swap" rel="stylesheet"> 
@@ -24,19 +27,37 @@
   </head>
   <body>
 
-      
+  
+<div class="contem-inicio" id="inicio">
+    <div class="container-inicio" id="containerInicio">
+      <div class="texto">
+    Ative o  <span class="destaque">som</span> e <br> <span class="destaque">toque</span> para começar
+  </div>
+  </div>
+
+</div>
+
       <div class="container-mesa">
-        <div class="box instrucao">Use fones de ouvido e clique para começar...</div>
-        <div class="box espaco"><button class="atualizar">atualizar</button></div>
+        <div class="box instrucao"></div>
+        <div class="box espaco"> 
+
+          <div class="imagens"> 
+            <div class="imagem img2"> <img src="atom-5.png" id="update" class="botao atualizar"></div>
+           <div class="imagem img1"> <img src="reset-4.png" id="restart" class="botao reiniciar"></div>
+  
+   
+           
+          </div>
+        </div>
+
+
         <div class="box titulo">
           <div class="titulo">Coisa</div>
         </div>
-        <div class="box sobre">Objeto sensível</div>
+        <div class="box sobre">?</div>
         
         <div class="box versao">
-          <div class="coisa-1">coisa_um</div>
-          <div class="coisa-2">coisa_dois</div>
-          <div class="coisa-3">coisa_tres</div>
+
 
         </div>
       </div>
