@@ -21,7 +21,7 @@ var comecou, movendo, primeiro;
 
 var amplificador;
 
-
+var hueA,hueB,hueC,hueD,hueE;
 
 var inicio, fim, entremeio;
 
@@ -39,9 +39,9 @@ window.addEventListener("load",function() {
 });
 
 function predefinicoesDoObjeto(){
-    vetores = 50;
+    vetores = 90;
     afastamento = 500;
-    deslocamento = 50;
+    deslocamento = random(0,40);
     reparticao = 20;
     raioX = -42;
     raioY = -12; 
@@ -64,6 +64,8 @@ function predefinicoesDoObjeto(){
     else{
         centroY = windowHeight/2.25;
     }
+
+    hueA = 0;
     
   }
 
@@ -78,13 +80,14 @@ function setup() {
     t = 0;
 
     velocidadeParticulas= 2; 
+    maxVelocity = 20;
 
     comecou = false;
     primeiro = true;
 
     predefinicoesDoObjeto();
     predefinicoesDoSom();
-    criaSliders();
+    //criaSliders();
 
     /*console.log("afastamento " + afastamento)
     console.log("deslocamento " + deslocamento)
@@ -95,6 +98,13 @@ function setup() {
 
     console.log("raioX " + raioX)
     console.log("raioY " + raioY)*/
+    var inicio = document.getElementById("inicio");
+    if(windowWidth > 200 && windowWidth/windowHeight > 1){
+    inicio.style.marginLeft = "-"+(deslocamento+100)+"px";
+    }
+    else{
+        inicio.style.marginLeft = "0";
+    }
 }
 
 function windowResized() {
@@ -107,13 +117,21 @@ function windowResized() {
     else{
         centroY = windowHeight/2.25;
     }
+
+    var inicio = document.getElementById("inicio");
+    if(windowWidth > 200 && windowWidth/windowHeight > 1){
+    inicio.style.marginLeft = "-"+(deslocamento+100)+"px";
+    }
+    else{
+        inicio.style.marginLeft = "0";
+    }
   }
 
 function draw(){
  
     background(0);
 
-    assignSliders();
+    //assignSliders();
     comecaCalcularMedia();
     inputa();
     gravidade();
