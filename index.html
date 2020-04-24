@@ -21,39 +21,46 @@
   </head>
   <body>
 
-  
 <div class="contem-inicio" id="inicio">
-    <div class="container-inicio" id="containerInicio">
       <div class="texto">
     Ative o  <span class="destaque">som</span> e <br> <span class="destaque">toque</span> para começar
   </div>
-  </div>
-
 </div>
 
-      <div class="container-mesa">
-        <div class="box instrucao"></div>
-        <div class="box espaco"> 
+<div id="mesaSup" class="container-mesa mesa-sup">
+  <div class="imagens" id="imgContainer"> 
+    <img src="img/atom-5.png" id="update" class="botao atualizar">
+    <img src="img/reset-4.png" id="restart" class="botao reiniciar">           
+</div>
+</div>
 
-          <div class="imagens"> 
-            <div class="imagem img2"> <img src="atom-5.png" id="update" class="botao atualizar"></div>
-           <div class="imagem img1"> <img src="reset-4.png" id="restart" class="botao reiniciar"></div>
-  
-   
-           
-          </div>
+      <div class="container-mesa mesa-inf">
+        <div class="box instrucao"></div>
+        <div id="contact" class="box espaco sobre"> 
+            contato
         </div>
 
 
-        <div class="box titulo">
+        <div id="title" class="box titulo">
           <div class="titulo">Coisa</div>
         </div>
-        <div class="box sobre">?</div>
+
+        <div id="about" class="box sobre">sobre</div>
         
         <div class="box versao">
 
 
         </div>
+      </div>
+      <div id="aboutWindow" class="about-window">
+        <div id="aboutButtons" class="container-grid">
+        <div class="esquerda">Alterar a coisa</div>
+        <div class="direita">Reiniciar</div>
+        <div id="aboutText" class="texto-sobre"> 
+          <div class="explicacao">Ambiente sensível ao som e ao toque, produzido com javascript e P5.js por Yan Hill. </div>         
+        </div>
+ 
+      </div>
       </div>
   </body>
   
