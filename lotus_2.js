@@ -40,6 +40,8 @@ var tela;
 
 var contact;
 
+var mesaInf;
+
 function drawParticle(x,y,w,h,hue,sat,bri){
     stroke(0);
     fill(hue,sat,bri);
@@ -117,7 +119,6 @@ function setup() {
     console.log("raioX " + raioX)
     console.log("raioY " + raioY)*/
     tela = document.getElementById("defaultCanvas0");
-
     tela.addEventListener('mouseup', touchScreen, false);
 
     if(windowWidth/windowHeight > 1){
@@ -142,6 +143,7 @@ document.addEventListener('DOMContentLoaded', function() {
     consideracoesIniciais = document.getElementById("inicio");
     aboutButtons = document.getElementById("aboutButtons");
     contact = document.getElementById("contact");
+    mesaInf = document.getElementById("mesaInf");
 
      about.addEventListener('click', function() {    
     //    if(!contactOnScreen){
@@ -187,7 +189,6 @@ document.addEventListener('DOMContentLoaded', function() {
         predefinicoesDoSom();
         containerInicio.style.display="block";
         btnRestart.style.display="none";
-        btnUpdate.style.borderBottom="1px solid #888";
 
        
 
@@ -218,7 +219,7 @@ document.addEventListener('DOMContentLoaded', function() {
     about.style.zIndex="1";
     mesaSup.style.zIndex="0";
     containerInicio.style.display="none";
-    
+    mesaInf.style.marginBottom="15px";
 
     aboutText.style.top = centroY-(aboutText.clientHeight/2)+"px";
     title.style.display="none";
@@ -228,17 +229,16 @@ document.addEventListener('DOMContentLoaded', function() {
  function hideContact(){
     aboutButtons.style.display = "block";
     mesaSup.style.display="block";
-    about.style.display="block";
+    about.style.display="flex";
     about.innerHTML="sobre";    
     contact.innerHTML="contato";
     aboutWindow.style.display ="none";  
     title.style.display="block";
- //   btnUpdate.style.borderBottom ="1px solid white";
+    mesaInf.style.marginBottom="0";
 
     if(!comecou && windowWidth/windowHeight > 1){
         containerInicio.style.display="block";
         btnRestart.style.display="none";
-  btnUpdate.style.borderBottom ="1px solid #888";
         consideracoesIniciais.style.top = centroY-(containerInicio.clientHeight/2)+"px";
     }
     else if(!comecou && windowWidth/windowHeight < 1){
@@ -261,21 +261,20 @@ function showAbout(){
     btnUpdate.style.borderBottom ="none";
     title.style.display="none";
     contact.innerHTML="";
-
+    mesaInf.style.marginBottom="15px";
 }
 function hideAbout(){
     mesaSup.style.display="block";
-    about.style.display="block";
+    about.style.display="flex";
     about.innerHTML="sobre";    
     contact.innerHTML="contato";
     aboutWindow.style.display ="none";  
     title.style.display="block";
-    
+    mesaInf.style.marginBottom="0";
     
     if(!comecou){
         containerInicio.style.display="block";
         btnRestart.style.display="none";
-        btnUpdate.style.borderBottom ="1px solid #888";
 
         if(windowWidth/windowHeight > 1){     
             containerInicio.style.top = centroY-(containerInicio.clientHeight/2)+"px";
