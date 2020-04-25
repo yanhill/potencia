@@ -55,6 +55,33 @@ window.addEventListener("load",function() {
     }, 0);
 });
 
+window.addEventListener('orientationchange', function(){
+    resizeCanvas(windowWidth, windowHeight);
+
+    centroX = windowWidth/2;
+    if(windowWidth/windowHeight < 0.6){
+        centroY = windowHeight/2.5;
+    }
+    else{
+        centroY = windowHeight/2.25;
+    }
+    if(aboutOnScreen){
+        aboutText.style.top = centroY-(aboutText.clientHeight/2)+"px";
+        aboutButtons.style.width = windowWidth - btnUpdate.offsetWidth - 20;
+    }
+
+    if(windowWidth/windowHeight > 1){
+        containerInicio.style.top = centroY-(containerInicio.clientHeight/2)+"px";
+        containerInicio.style.left = (centroX-containerInicio.clientWidth-deslocamento-80)+"px";
+    }
+    else if(windowWidth/windowHeight < 1){
+        containerInicio.style.top = centroY-(containerInicio.clientHeight/2)-(deslocamento+100)+"px";
+        containerInicio.style.left = "auto";
+    }
+
+});
+
+
 function predefinicoesDoObjeto(){
     vetores = 50;
     afastamento = 500;
