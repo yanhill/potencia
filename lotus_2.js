@@ -132,7 +132,7 @@ function setup() {
 
 window.addEventListener('orientationchange', function(){
     resizeCanvas(windowWidth, windowHeight);
-
+    console.log("orientacao mudou");
     centroX = windowWidth/2;
     if(windowWidth/windowHeight < 0.6){
         centroY = windowHeight/2.5;
