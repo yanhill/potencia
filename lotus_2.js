@@ -94,6 +94,14 @@ function windowResized() {
         realignBegining();
     }
 }
+window.addEventListener("resize", function(){
+    console.log()
+        resizeCanvas(windowWidth, windowHeight);
+    realignCenter();
+    if(!comecou){
+        realignBegining();
+    }
+});
 function draw(){
     background(0);
     //assignSliders();
