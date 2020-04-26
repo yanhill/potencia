@@ -28,9 +28,11 @@ html, body {
   }
   .mesa-sup{
     color:white;
+    position: fixed;
     margin-top:10px;
     margin-bottom:0px;
     right:0;
+    position: fixed;
   }
   .destaque{
     color:white;
@@ -160,7 +162,4 @@ font-family: 'Share Tech Mono', monospace;
       left: 0;
     }   
   }
-  
-
-
-
+ 
