@@ -17,10 +17,6 @@ html, body {
   }
 
   .esquerda, .direita{
-    -webkit-box-pack: end;
-    -moz-box-pack: end;
-    -ms-flex-pack: end;
-    -webkit-justify-content: end;
     justify-content: end;
   }
 
@@ -45,6 +41,7 @@ html, body {
   .titulo{
     font-size:1.2em;
     font-family: 'Open Sans Condensed', sans-serif;
+    align-self: end;
   }
   .botao{
     width:25px;
@@ -76,13 +73,7 @@ html, body {
     padding: 0 5px;
     align-items: end;
     justify-content:center;
-    height:100%;
-    font-family: 'Share Tech Mono', monospace;
-    display:flex;
-    -webkit-display:flex;
 
-    -webkit-align-items:end;
-    -webkit-justify-content:center;
   }
   .tela, .container-mesa{
     position:absolute;
@@ -91,7 +82,13 @@ html, body {
     font-family: 'Share Tech Mono', monospace;
     font-size: 0.9em;
   } 
-
+  .sobre{
+    font-size: 0.9em;
+    font-family: 'Share Tech Mono', monospace;
+    align-self: center;
+    display: flex;
+    height: 100%;
+  }
   .instrucao, .versao{
     display:none;
   }
@@ -149,7 +146,6 @@ font-family: 'Share Tech Mono', monospace;
   }
   .espaco {
     display: flex;
-    display: -webkit-flex;
    }
   @media (min-width: 200px) and (orientation: portrait){
     .container-inicio{
