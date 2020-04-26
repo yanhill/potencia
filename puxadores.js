@@ -1,6 +1,5 @@
 var x3;
 var y3;
-var containerInicio, btnUpdate, btnRestart;
 
 var about;
 
@@ -23,7 +22,7 @@ function mouseMoved(){
 }
 
 function mouseDragged(){
-    if(comecou && !aboutOnScreen){
+    if(comecou && !aboutOnScreen && mouseY > 200){
         x3 = map(mouseX, centroX, centroX+100 , 0 , 100);
         y3 = map(mouseY, centroY , centroY+100 , 0 , 100);
     
@@ -61,40 +60,3 @@ function touchScreen(){
 function inputa(){
 }
 
-function touchStarted(){
-   /*  if(!comecou){
-    console.log("TOUCH") 
-    song.play();
-    comecou = true;
-    
-    containerInicio.style.display ="none";      
-    btnRestart.style.display ="block";        
-    btnUpdate.style.borderBottom ="none";
-    }
-           
-  if(mouseY < windowHeight/1.1 && !aboutOnScreen){
-       
-
-    if(comecou){
-        console.log("hm");
-    }
-       else{   
-            song.play();
-            comecou = true;
-            
-            
-            containerInicio.style.display ="none";      
-            btnRestart.style.display ="block";        
-            btnUpdate.style.borderBottom ="none";
-
-            console.log(comecou);
-            
-        }
-
- 
-  //      else if(comecou && mouseY <  windowHeight/1.1 && !aboutOnScreen){
-   //         raioX = x3*30;
-  //          raioY = y3*30;
-  //  }
-}*/
-}
