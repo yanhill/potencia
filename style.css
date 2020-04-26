@@ -1,6 +1,9 @@
 body{
   position: relative;
 }
+canvas{
+  display: block;
+}
 html, body {
     margin: 0;
     padding: 0;
