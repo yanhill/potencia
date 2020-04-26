@@ -17,7 +17,7 @@ function predefinicoesDoSom(){
 
 function preload(){
     //song = loadSound('pg/metamorphosis.mp3');
-    song = loadSound('musicas/SIMS/5.mp3');
+    song = loadSound('5.mp3');
     //song = loadSound('LINN/bixaTravesty.mp3');
     //song = loadSound('TOE/EyeOfNight.mp3');
     //song = loadSound('TOE/thePassage.mp3');
