@@ -1,9 +1,6 @@
 body{
   position: relative;
 }
-canvas{
-  display: block;
-}
 html, body {
     margin: 0;
     padding: 0;
@@ -20,8 +17,6 @@ html, body {
   }
 
   .esquerda, .direita{
-    display: -webkit-flex;
-    display:flex;
     -webkit-box-pack: end;
     -moz-box-pack: end;
     -ms-flex-pack: end;
@@ -50,7 +45,6 @@ html, body {
   .titulo{
     font-size:1.2em;
     font-family: 'Open Sans Condensed', sans-serif;
-    align-self: end;
   }
   .botao{
     width:25px;
@@ -81,6 +75,14 @@ html, body {
   .box{
     padding: 0 5px;
     align-items: end;
+    justify-content:center;
+    height:100%;
+    font-family: 'Share Tech Mono', monospace;
+    display:flex;
+    -webkit-display:flex;
+
+    -webkit-align-items:end;
+    -webkit-justify-content:center;
   }
   .tela, .container-mesa{
     position:absolute;
@@ -89,14 +91,7 @@ html, body {
     font-family: 'Share Tech Mono', monospace;
     font-size: 0.9em;
   } 
-  .sobre{
-    font-size: 0.9em;
-    font-family: 'Share Tech Mono', monospace;
-    align-self: center;
-    display: flex;
-    height: 100%;
-    justify-content: center;
-  }
+
   .instrucao, .versao{
     display:none;
   }
@@ -130,11 +125,13 @@ html, body {
   }
   .esquerda{
 height: 43.45px;
+display: flex;
 align-items: center;
 font-family: 'Share Tech Mono', monospace;
     font-size: 0.9em;
   }
   .direita{
+    display: flex;
     align-items: center;
     height:45.85px;
     font-family: 'Share Tech Mono', monospace;
@@ -152,7 +149,7 @@ font-family: 'Share Tech Mono', monospace;
   }
   .espaco {
     display: flex;
-    justify-content: center;
+    display: -webkit-flex;
    }
   @media (min-width: 200px) and (orientation: portrait){
     .container-inicio{
