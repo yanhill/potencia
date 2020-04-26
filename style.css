@@ -17,6 +17,8 @@ html, body {
   }
 
   .esquerda, .direita{
+    display: -webkit-flex;
+    display:flex;
     -webkit-box-pack: end;
     -moz-box-pack: end;
     -ms-flex-pack: end;
@@ -125,13 +127,11 @@ html, body {
   }
   .esquerda{
 height: 43.45px;
-display: flex;
 align-items: center;
 font-family: 'Share Tech Mono', monospace;
     font-size: 0.9em;
   }
   .direita{
-    display: flex;
     align-items: center;
     height:45.85px;
     font-family: 'Share Tech Mono', monospace;
