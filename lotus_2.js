@@ -115,7 +115,7 @@ function draw(){
     pop();
 }
 function gravidade(){
-    var easing = 0.0005;
+    var easing = 0.0009;
     var target = 9000;
 
     if (comecou && primeiro){
