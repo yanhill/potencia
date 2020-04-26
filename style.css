@@ -17,6 +17,7 @@ html, body {
   }
 
   .mesa-inf{
+    position:fixed;
     color:white;
     position:fixed;
     bottom: 0;
@@ -71,7 +72,7 @@ html, body {
     display: flex;
     justify-content: center;
   }
-  .tela, .container-mesa{
+  .tela{
     position:absolute;
   }
   .texto{
@@ -159,4 +160,7 @@ font-family: 'Share Tech Mono', monospace;
       left: 0;
     }   
   }
- 
+  
+
+
+
