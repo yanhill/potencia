@@ -15,6 +15,15 @@ html, body {
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     overflow: hidden;
   }
+
+  .esquerda, .direita{
+    -webkit-box-pack: end;
+    -moz-box-pack: end;
+    -ms-flex-pack: end;
+    -webkit-justify-content: end;
+    justify-content: end;
+  }
+
   .mesa-inf{
     color:white;
     bottom: 0;
@@ -117,14 +126,12 @@ html, body {
   .esquerda{
 height: 43.45px;
 display: flex;
-justify-content: end;
 align-items: center;
 font-family: 'Share Tech Mono', monospace;
     font-size: 0.9em;
   }
   .direita{
     display: flex;
-    justify-content: end;
     align-items: center;
     height:45.85px;
     font-family: 'Share Tech Mono', monospace;
