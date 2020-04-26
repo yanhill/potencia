@@ -17,7 +17,7 @@ function predefinicoesDoSom(){
 
 function preload(){
     //song = loadSound('pg/metamorphosis.mp3');
-    song = loadSound('5.mp3');
+    song = loadSound('musicas/SIMS/5.mp3');
     //song = loadSound('LINN/bixaTravesty.mp3');
     //song = loadSound('TOE/EyeOfNight.mp3');
     //song = loadSound('TOE/thePassage.mp3');
@@ -33,14 +33,14 @@ function comecaCalcularMedia(){
     if(vols.length == 1){
         var total = 0;
         
-        if(volsTodos.length <= 50) var media = 0.01
+        if(volsTodos.length <= 75) var media = 0.01
         else {
-            for(var i = 0; i < 50 ; i++){
+            for(var i = 0; i < 75 ; i++){
                 total += volsTodos[volsTodos.length-1 - i];
             }
-            var media = total / 50;
+            var media = total / 75;
         } 
-        console.log(media);
+      //  console.log(media);
         velocidadeParticulas = map(media, 0, 1, 0, maxVelocity);
         vols = [];
     }
