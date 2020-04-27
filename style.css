@@ -1,4 +1,5 @@
 body{
+  position: fixed;
 }
 html, body {
     margin: 0;
@@ -10,14 +11,15 @@ html, body {
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     overflow: hidden;
   }
-
   .esquerda, .direita{
     justify-content: end;
   }
-
+  /*
   .p5Canvas{
+      position:absolute;
+      z-index: -1;
   }
-
+  */
   .mesa-inf{
     position:fixed;
     color:white;
@@ -164,3 +166,4 @@ font-family: 'Share Tech Mono', monospace;
       left: 0;
     }   
   }
+ 
