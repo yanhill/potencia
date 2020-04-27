@@ -14,12 +14,12 @@ html, body {
   .esquerda, .direita{
     justify-content: end;
   }
-  /*
+  
   .p5Canvas{
       position:absolute;
       z-index: -1;
   }
-  */
+  
   .mesa-inf{
     position:fixed;
     color:white;
