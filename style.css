@@ -1,5 +1,5 @@
 body{
-    position: fixed;
+  position: fixed;
 }
 html, body {
     margin: 0;
@@ -16,10 +16,10 @@ html, body {
   }
   
   .p5Canvas{
-      position:absolute;
+      position:fixed;
       z-index: -1;
   }
-  
+
   .mesa-inf{
     position:fixed;
     color:white;
@@ -96,9 +96,6 @@ html, body {
   .instrucao, .versao{
     display:none;
   }
-  .texto-sobre{
-    width:70%;
-  }
   .mesa-sup{
     top: 0;
     margin-right:10;
@@ -114,14 +111,17 @@ html, body {
     color: white;
     text-align: center;
     font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 1.6em;
     position: absolute;
     display: block;
     position: absolute;
     left: 0;
     right: 0;
     margin: auto;
-    line-height: 110%;
+    line-height: 115%;
+    font-size: 1.25em;
+    margin-left: 15px;
+    margin-top: 15px;
+margin-right: 20px;
   }
   .esquerda{
 height: 43.45px;
@@ -166,4 +166,7 @@ font-family: 'Share Tech Mono', monospace;
       left: 0;
     }   
   }
- 
+  
+
+
+
