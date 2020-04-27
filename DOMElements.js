@@ -30,7 +30,16 @@ document.addEventListener('DOMContentLoaded', function() {
  }, false); 
 
 
- function update(){};
+ function update(){
+    vetores = random(150,50);
+    deformaX = random(0,5026)
+    deformaY = random(0,5019);
+    afastamento = random(2,500);
+    raioX = 0;
+    raioY = 0; 
+    primeiro = true;
+ };
+
  function restart(){
     comecou = false;
     primeiro = true;  
@@ -82,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
     pauseGame();
     aboutButtons.style.display = "none";
     mesaSup.style.zIndex="0";
-    aboutText.innerHTML ="Ambiente sensível ao som e ao toque, produzido com javascript e P5.js por Yan Hill.";
+    aboutText.innerHTML ="Ambiente sensível ao som e ao toque, produzido com javascript e P5.js por Yan Hill.<br><br>Coisa é um objeto <i>virtual</i>. Isso significa que não se trata de um objeto com parâmetros constantes e irrevogáveis. Ao contrário, se trata, na verdade, de um objeto que pode ser atualizado incontéveis vezes. E cada vez em que é atualizado, seus parâmetros mudam, formando um outro código, ou uma outra interpretação dessa única coisa.<br>É exatamente o que acontece ao clicar no botão atualizar. " ;
     aboutText.style.top = centroY-(aboutText.clientHeight/2)+"px";
     mesaSup.style.display = "none";
  }
