@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
     title.style.display="block";
     mesaInf.style.background="RGBA(0,0,0,0.5)";
     aboutText.innerHTML ="";
-    aboutText.style.display ="block";
+    aboutText.style.display ="auto";
 
     if(!comecou){
         btnRestart.style.display="none";
@@ -87,10 +87,14 @@ document.addEventListener('DOMContentLoaded', function() {
     pauseGame();
     aboutButtons.style.display = "none";
     mesaSup.style.zIndex="0";
-    aboutText.innerHTML ="Ambiente sensível ao som e ao toque, produzido com javascript e P5.js por Yan Hill.<br><br>Coisa é um objeto <i>virtual</i>. Isso significa que não se trata de um objeto com parâmetros constantes e irrevogáveis. Ao contrário, se trata, na verdade, de algo que pode ser atualizado incontéveis vezes. E cada vez em que é atualizado, seus parâmetros mudam, formando um outro código, ou uma outra interpretação da mesma coisa.<br>É exatamente o que acontece ao clicar no botão atualizar. Os números que determinam os parâmetros da coisa são sorteados entre 0 e 49.999, então a coisa surge novamente em uma nova manifestação de si. Enfim, virtualizar é, antes de tudo, regredir. É transformar aquilo que já está solucionado em um problema. E então conceder <b>potência</b> a esse problema. Potência para infinitas soluções. " ;
+    aboutText.innerHTML ="Ambiente sensível ao som e ao toque, produzido com javascript e P5.js por Yan Hill.<br><br>Coisa é um objeto <i>virtual</i>. Isso significa que não se trata de um objeto com parâmetros constantes e irrevogáveis. Ao contrário, se trata, na verdade, de algo que pode ser atualizado incontéveis vezes. E cada vez em que é atualizado, seus parâmetros mudam, formando um outro código, ou uma outra interpretação da mesma coisa.<br>É exatamente o que acontece ao clicar no botão atualizar. Os números que determinam os parâmetros da coisa são sorteados entre 0 e 49.999, então a coisa surge novamente em uma nova manifestação de si. Enfim, virtualizar é, antes de tudo, regredir. É transformar aquilo que já está solucionado em um problema. E então conceder <b>potência</b> a esse problema. Potência para infinitas soluções.<br><br><br> " ;
     aboutText.style.textAlign = "left";
     mesaSup.style.display = "none";
+    aboutText.style.height = window.innerHeight;
     aboutText.style.top = "0";
+    mesaInf.style.background="RGBA(0,0,0,1)";
+
+    
  }
 
  function showAbout(){   
