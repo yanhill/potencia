@@ -6,6 +6,7 @@ var tela;
 var mesaInf, mesaSup; 
 var containerInicio;
 var btnUpdate, btnRestart, about, contact;
+var canvasScript;
 
 document.addEventListener('DOMContentLoaded', function() {
     btnRestart = document.getElementById("restart");
@@ -19,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
     aboutButtons = document.getElementById("aboutButtons");
     contact = document.getElementById("contact");
     mesaInf = document.getElementById("mesaInf");
+    
 
     btnRestart.addEventListener('click', restart, false);
     btnUpdate.addEventListener('click', update, false);
@@ -26,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
     about.addEventListener('click', showAbout, false);
     aboutWindow.addEventListener('click',hideAbout , false);
  }, false); 
+
 
  function update(){};
  function restart(){
@@ -110,12 +113,12 @@ function hideAbout(){
 
 
 function realignBegining(){   
-    if(windowWidth/windowHeight > 1){
+    if(windowWidth/windowHeight > 1){ // HORIZONTAL
         containerInicio.style.top = centroY-(containerInicio.clientHeight/2)+"px";
-        containerInicio.style.left = (centroX-containerInicio.clientWidth-deslocamento-80)+"px";}
-    else{
+        containerInicio.style.left = centroX-(containerInicio.clientWidth/2)-(deslocamento+150)+"px"}
+    else{ // VERTICAL
         containerInicio.style.top = centroY-(containerInicio.clientHeight/2)-(deslocamento+100)+"px";
-        containerInicio.style.left = "auto";}
+        containerInicio.style.left = (centroX-(containerInicio.clientWidth*0.5))+"px";}
     }
 
 
