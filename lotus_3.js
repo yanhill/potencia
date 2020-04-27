@@ -184,7 +184,7 @@ function objeto(){
                 stroke(270 , 80 , 100);
                 drawParticle((posiX*a)+deslocamento , (posiY*a)+deslocamento , 6+(a/4)*(posiX) , 3+(a/4)*posiY , 280 , 65 , 100);
             }         
-            desenharAgulhas(posiX,posiY,spectrumPosition,a);
+           // desenharAgulhas(posiX,posiY,spectrumPosition,a);
             contador++;
             vao += afastamento;
             spectrumPosition++;
