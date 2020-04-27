@@ -1,144 +1,168 @@
-var aboutWindow, aboutText;
-var aboutOnScreen, contactOnScreen;
-var title;
-var aboutButtons;
-var tela;
-var mesaInf, mesaSup; 
-var containerInicio;
-var btnUpdate, btnRestart, about, contact;
-var canvasScript;
+body{
+  position: fixed;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    font-size: 18px;
+    background-color: white;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    overflow: hidden;
+  }
+  .esquerda, .direita{
+    justify-content: end;
+  }
+  
+  .p5Canvas{
+      position:fixed;
+      z-index: -1;
+  }
 
-document.addEventListener('DOMContentLoaded', function() {
-    btnRestart = document.getElementById("restart");
-    btnUpdate = document.getElementById("update");
-    about = document.getElementById("about");
-    aboutWindow = document.getElementById("aboutWindow");
-    mesaSup = document.getElementById("mesaSup");
-    containerInicio = document.getElementById("inicio");
-    title = document.getElementById("title");
-    aboutText = document.getElementById("aboutText");
-    aboutButtons = document.getElementById("aboutButtons");
-    contact = document.getElementById("contact");
-    mesaInf = document.getElementById("mesaInf");
-    
-    btnRestart.addEventListener('click', restart, false);
-    btnUpdate.addEventListener('click', update, false);
-    contact.addEventListener('click', showContact, false);
-    about.addEventListener('click', showAbout, false);
-    aboutWindow.addEventListener('click',hideAbout , false);
- }, false); 
+  .mesa-inf{
+    position:fixed;
+    color:white;
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    padding-bottom: 10px;
+  }
+  .mesa-sup{
+    color:white;
+    position: fixed;
+    margin-top:10px;
+    margin-bottom:0px;
+    right:0;
+    position: fixed;
+  }
+  .destaque{
+    color:white;
+  }
+  .titulo{
+    font-size:1.2em;
+    font-family: 'Open Sans Condensed', sans-serif;
+    align-self: end;
+  }
+  .botao{
+    width:25px;
+    padding: 10px;
+    padding-top: 10px;
+    background: RGBA(0,0,0,0.5);
+  } 
+  .reiniciar{ 
+    border-top: 1px solid #888;
+    padding-bottom: 10px;
+    display:none;
+  }
+  .espaco{
+    padding-bottom: 8px;
+  }
+  .container-inicio{
+    color: #888;
+    top: 0;
+    letter-spacing: 1px;
+    font-family: 'Share Tech Mono', monospace;
+  }
+  .contem-inicio{
+    color:#888;
+    position:absolute;
+    text-align: right;
+  }
 
-
- function update(){
-    vetores = random(150,50);
-    deformaX = random(0,5026)
-    deformaY = random(0,5019);
-    afastamento = random(2,500);
-    raioX = 0;
-    raioY = 0; 
-    primeiro = true;
- };
-
- function restart(){
-    comecou = false;
-    primeiro = true;  
-
-    console.log("restart");
-    song.stop();
-    predefinicoesDoObjeto();
-
-    if(aboutOnScreen){
-        hideAbout();
-    }       
-    containerInicio.style.display="block";
-    btnRestart.style.display="none";
- }
-
- function pauseGame(){
-    aboutWindow.style.display ="block";
-    about.style.zIndex="1";
-    about.innerHTML="Toque para voltar";   
-    containerInicio.style.display="none";
-    mesaInf.style.background="none";
-    contact.innerHTML="";
-    title.style.display="none";
- }
-
- function gameBack(){
-    mesaSup.style.display="block";
-    about.style.display="flex";
-    about.innerHTML="sobre";  
-    contact.innerHTML="contato";
-    aboutWindow.style.display ="none"; 
-    title.style.display="block";
-    mesaInf.style.background="RGBA(0,0,0,0.5)";
-    aboutText.innerHTML ="";
-    aboutText.style.display ="block";
-
-    if(!comecou){
-        btnRestart.style.display="none";
-        containerInicio.style.display="block";
-        realignBegining();     
+  .box{
+    padding: 0 5px;
+    align-items: end;
+    display: flex;
+    justify-content: center;
+  }
+  .tela{
+    position:absolute;
+  }
+  .texto{
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.9em;
+  } 
+  .sobre{
+    font-size: 0.9em;
+    font-family: 'Share Tech Mono', monospace;
+    align-self: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+  }
+  .instrucao, .versao{
+    display:none;
+  }
+  .mesa-sup{
+    top: 0;
+    margin-right:10;
+  }
+  .about-window{
+    display:none;
+    width:100%;
+    height:100%;
+    background:RGBA(0,0,0,0.8);
+    position: absolute;
+  }
+  .texto-sobre{
+    color: white;
+    text-align: center;
+    font-family: 'Open Sans Condensed', sans-serif;
+    position: absolute;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    line-height: 115%;
+    font-size: 1.25em;
+    margin-left: 15px;
+    margin-top: 15px;
+margin-right: 20px;
+  }
+  .esquerda{
+height: 43.45px;
+display: flex;
+align-items: center;
+font-family: 'Share Tech Mono', monospace;
+    font-size: 0.9em;
+  }
+  .direita{
+    display: flex;
+    align-items: center;
+    height:45.85px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.9em;
+  }
+  .container-grid{
+    display: block;
+    color: white;
+    margin-top: 10px;
+    align-items: center;
+    margin-right:10px;    
+  }
+  .texto-sobre > .titulo{
+    font-size:1.5em;
+  }
+  @media (min-width: 200px) and (orientation: portrait){
+    .container-inicio{
+      text-align: center;
+      margin-top: 30%;
     }
-}
-
- function showContact(){
-    contactOnScreen = true;
-    pauseGame();
-    aboutButtons.style.display = "none";
-    mesaSup.style.zIndex="0";
-    aboutText.innerHTML ="Ambiente sensível ao som e ao toque, produzido com javascript e P5.js por Yan Hill.<br><br>Coisa é um objeto <i>virtual</i>. Isso significa que não se trata de um objeto com parâmetros constantes e irrevogáveis. Ao contrário, se trata, na verdade, de um objeto que pode ser atualizado incontéveis vezes. E cada vez em que é atualizado, seus parâmetros mudam, formando um outro código, ou uma outra interpretação da mesma coisa.<br>É exatamente o que acontece ao clicar no botão atualizar. Os números que determinam os parâmetros da coisa são sorteados entre 0 e 49.999, então a coisa surge novamente em uma nova manifestação de si. Enfim, virtualizar é, antes de tudo, regredir. É transformar aquilo que já está solucionado em um problema. E então conceder <b>potência</b> a esse problema. Potência abundante para incontáveis soluções. " ;
-    aboutText.style.top = centroY-(aboutText.clientHeight/2)+"px";
-    mesaSup.style.display = "none";
- }
-
- function showAbout(){   
-    aboutOnScreen = true;
-    pauseGame();
-    aboutButtons.style.display = "block";
-    mesaSup.style.zIndex="1";
-    btnRestart.style.display="block";    
-    aboutText.style.top = centroY-(aboutText.clientHeight/2)+"px";
-    aboutButtons.style.width = windowWidth - btnUpdate.offsetWidth - 20;
-}
-
- function hideContact(){
-    gameBack();
-    aboutButtons.style.display = "block"; 
-    contactOnScreen = false;
-}
-
-function hideAbout(){
-    gameBack();  
-    aboutOnScreen = false;
-}
-
-function realignBegining(){   
-    if(windowWidth/windowHeight > 1){ // HORIZONTAL
-        containerInicio.style.top = centroY-(containerInicio.clientHeight/2)+"px";
-        containerInicio.style.left = centroX-(containerInicio.clientWidth/2)-(deslocamento+150)+"px"}
-    else{ // VERTICAL
-        containerInicio.style.top = centroY-(containerInicio.clientHeight/2)-(deslocamento+100)+"px";
-        containerInicio.style.left = (centroX-(containerInicio.clientWidth*0.5))+"px";}
+    .contem-inicio{
+      text-align:center;
     }
-
-function realignCenter(){
-    centroX = windowWidth/2;
-    if(windowWidth/windowHeight < 0.6){
-        centroY = windowHeight/2.5;}
-    else centroY = windowHeight/2.25;
-
-    if(aboutOnScreen || contactOnScreen){
-        aboutText.style.top = centroY-(aboutText.clientHeight/2)+"px";
-        aboutButtons.style.width = windowWidth - btnUpdate.offsetWidth - 20;
-    }
-}
-
-window.addEventListener('orientationchange', function(){
-    resizeCanvas(windowWidth, windowHeight);
-    console.log("orientacao_mudou");
-    realignCenter();
-    if(!comecou){
-        realignBegining();
-    }
-});
+  }
+  @media (min-width: 200px) and (orientation: landscape){
+    .container-inicio{    
+      text-align: right;    
+      height: 50%;    
+      margin-left: -110px;    
+    }        
+    .contem-inicio{
+      left: 0;
+    }   
+  }
