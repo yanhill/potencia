@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
     contact = document.getElementById("contact");
     mesaInf = document.getElementById("mesaInf");
     
-
     btnRestart.addEventListener('click', restart, false);
     btnUpdate.addEventListener('click', update, false);
     contact.addEventListener('click', showContact, false);
@@ -55,7 +54,6 @@ document.addEventListener('DOMContentLoaded', function() {
     btnRestart.style.display="none";
  }
 
-
  function pauseGame(){
     aboutWindow.style.display ="block";
     about.style.zIndex="1";
@@ -65,7 +63,6 @@ document.addEventListener('DOMContentLoaded', function() {
     contact.innerHTML="";
     title.style.display="none";
  }
-
 
  function gameBack(){
     mesaSup.style.display="block";
@@ -85,17 +82,15 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 }
 
-
  function showContact(){
     contactOnScreen = true;
     pauseGame();
     aboutButtons.style.display = "none";
     mesaSup.style.zIndex="0";
-    aboutText.innerHTML ="Ambiente sensível ao som e ao toque, produzido com javascript e P5.js por Yan Hill.<br><br>Coisa é um objeto <i>virtual</i>. Isso significa que não se trata de um objeto com parâmetros constantes e irrevogáveis. Ao contrário, se trata, na verdade, de um objeto que pode ser atualizado incontéveis vezes. E cada vez em que é atualizado, seus parâmetros mudam, formando um outro código, ou uma outra interpretação dessa única coisa.<br>É exatamente o que acontece ao clicar no botão atualizar. " ;
+    aboutText.innerHTML ="Ambiente sensível ao som e ao toque, produzido com javascript e P5.js por Yan Hill.<br><br>Coisa é um objeto <i>virtual</i>. Isso significa que não se trata de um objeto com parâmetros constantes e irrevogáveis. Ao contrário, se trata, na verdade, de um objeto que pode ser atualizado incontéveis vezes. E cada vez em que é atualizado, seus parâmetros mudam, formando um outro código, ou uma outra interpretação da mesma coisa.<br>É exatamente o que acontece ao clicar no botão atualizar. Os números que determinam os parâmetros da coisa são sorteados entre 0 e 49.999, então a coisa surge novamente em uma nova manifestação de si. Enfim, virtualizar é, antes de tudo, regredir. É transformar aquilo que já está solucionado em um problema. E então conceder <b>potência</b> a esse problema. Potência abundante para incontáveis soluções. " ;
     aboutText.style.top = centroY-(aboutText.clientHeight/2)+"px";
     mesaSup.style.display = "none";
  }
-
 
  function showAbout(){   
     aboutOnScreen = true;
@@ -107,19 +102,16 @@ document.addEventListener('DOMContentLoaded', function() {
     aboutButtons.style.width = windowWidth - btnUpdate.offsetWidth - 20;
 }
 
-
  function hideContact(){
     gameBack();
     aboutButtons.style.display = "block"; 
     contactOnScreen = false;
 }
 
-
 function hideAbout(){
     gameBack();  
     aboutOnScreen = false;
 }
-
 
 function realignBegining(){   
     if(windowWidth/windowHeight > 1){ // HORIZONTAL
@@ -129,7 +121,6 @@ function realignBegining(){
         containerInicio.style.top = centroY-(containerInicio.clientHeight/2)-(deslocamento+100)+"px";
         containerInicio.style.left = (centroX-(containerInicio.clientWidth*0.5))+"px";}
     }
-
 
 function realignCenter(){
     centroX = windowWidth/2;
@@ -142,7 +133,6 @@ function realignCenter(){
         aboutButtons.style.width = windowWidth - btnUpdate.offsetWidth - 20;
     }
 }
-
 
 window.addEventListener('orientationchange', function(){
     resizeCanvas(windowWidth, windowHeight);
