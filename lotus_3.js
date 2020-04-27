@@ -51,7 +51,7 @@ function predefinicoesDoObjeto(){
     y2 = function(t) {
         return raioY * sin(t / deformaY);};
 
-    centroX = window.outerWidth;
+    centroX = window.outerWidth/2;
     if(window.outerWidth/window.outerHeight < 0.6){
         centroY = window.outerHeight/2.3;
     }
