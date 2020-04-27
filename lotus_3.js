@@ -104,8 +104,7 @@ window.addEventListener("resize", function(){
 
 
 function draw(){
-    background(0);
-    //background(200 , 100 , 100);
+    background(200 , 100 , 100);
     //assignSliders();
     comecaCalcularMedia();
     inputa();
