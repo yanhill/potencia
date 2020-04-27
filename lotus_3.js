@@ -107,7 +107,6 @@ window.addEventListener("resize", function(){
     }
 });
 
-
 function draw(){
     background(0);
     //assignSliders();
@@ -121,7 +120,7 @@ function draw(){
     pop();
 }
 function gravidade(){
-    var easing = 0.0009;
+    var easing = 0.001;
     var target = 9000;
 
     if (comecou && primeiro){
