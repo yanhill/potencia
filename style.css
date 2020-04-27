@@ -1,4 +1,5 @@
 body{
+  position: fixed;
 }
 html, body {
     margin: 0;
@@ -13,6 +14,11 @@ html, body {
 
   .esquerda, .direita{
     justify-content: end;
+  }
+
+  .p5Canvas{
+    position:absolute;
+    z-index: -1;
   }
 
   .mesa-inf{
